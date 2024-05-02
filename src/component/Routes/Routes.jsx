@@ -59,9 +59,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist/update/:id',
-        element: 
+        element: <PrivateRouters>
           <UpdateSpot></UpdateSpot>
-       ,
+        </PrivateRouters>,
           
         loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
 
