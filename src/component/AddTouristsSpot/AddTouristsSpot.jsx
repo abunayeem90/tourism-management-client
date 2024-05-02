@@ -29,7 +29,7 @@ const AddTouristsSpot = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/addSpot', {
+        fetch('https://tourism-management-server-blond.vercel.app/addSpot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

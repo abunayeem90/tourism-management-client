@@ -52,13 +52,13 @@ const router = createBrowserRouter([
           element: <PrivateRouters>
             <MyList></MyList>
           </PrivateRouters>,
-          loader: () => fetch(`http://localhost:5000/addSpot`)
+          // loader: () => fetch(`https://tourism-management-server-blond.vercel.app/addSpot`)
         },
         {
           path: '/mylist/update/:id',
           element:
             <UpdateSpot></UpdateSpot>,
-          loader: ({params}) => fetch(`http://localhost:5000/addSpot/${params.id}`)
+          loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
 
         },
         {

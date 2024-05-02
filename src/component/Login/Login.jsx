@@ -63,7 +63,7 @@ const Login = () => {
 
               // send data to the server
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://tourism-management-server-blond.vercel.app/user', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -99,7 +99,7 @@ const Login = () => {
 
                   // send data to the server
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://tourism-management-server-blond.vercel.app/user', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -135,7 +135,7 @@ const Login = () => {
 
                   // send data to the server
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://tourism-management-server-blond.vercel.app/user', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

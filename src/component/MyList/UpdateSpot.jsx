@@ -7,7 +7,7 @@ import { useLoaderData } from "react-router-dom";
 const UpdateSpot = () => {
     const {user} = useContext(AuthContext);
     const updateSpot = useLoaderData();
-    const {_id, countryName, spotName, image, location, shortDescription, averageCost, seasonality, travelTime, visitors, userName, userEmail  } = updateSpot;
+    const {_id, countryName, spotName, image, location, shortDescription, averageCost, seasonality, travelTime, visitors,  } = updateSpot;
 
     const handleUpdateSpot = (e) => {
         e.preventDefault();
@@ -28,7 +28,7 @@ const UpdateSpot = () => {
         console.log(updateInfo);
 
         // send data to the server
-        fetch(`http://localhost:5000/addSpot/${_id}`, {
+        fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
