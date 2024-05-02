@@ -72,6 +72,8 @@ const MyList = () => {
                             }
                         })
                 }
+
+                // delete country
             });
         }
 
@@ -90,9 +92,7 @@ const MyList = () => {
       
         <div>
             {/* card */}
-
-            
-            <div className="grid gap-8 my-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+             <div className="grid gap-8 my-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
                 
                 {
                     userData && 
@@ -136,6 +136,10 @@ const MyList = () => {
              </div>)
                 }
             </div>
+
+            
+            
+            
         </div>
     );
 };

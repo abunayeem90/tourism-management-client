@@ -4,8 +4,11 @@ import Footer from "./Footer/Footer";
 
 
 const MainLayout = () => {
+
     return (
         <div >
+
+
             <div className="mx-10">
             <Header></Header>
             <Outlet></Outlet>

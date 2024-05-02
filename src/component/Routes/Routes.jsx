@@ -12,6 +12,9 @@ import Country from '../Country/Country';
 import PrivateRouters from './PrivateRouters';
 import Profile from '../Profile/Profile';
 import UpdateSpot from '../MyList/UpdateSpot';
+import About from '../About/About';
+import Contact from '../About/Contact/Contact';
+import Countries from '../Country/Ccountries/Countries';
 
 
 const router = createBrowserRouter([
@@ -23,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json'),
+        // loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json'),
 
 
       },
@@ -67,10 +70,25 @@ const router = createBrowserRouter([
 
       },
       {
+        path: '/countries',
+        element: <Countries></Countries>,
+        // loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries')
+        
+        
+      },
+      {
         path: '/profile',
         element: <PrivateRouters>
           <Profile></Profile>
         </PrivateRouters>
+      },
+      {
+        path: '/aboutus',
+        element: <About></About>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       },
       {
         path: '/login',

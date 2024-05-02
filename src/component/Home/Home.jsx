@@ -1,16 +1,14 @@
 
 import Slider from "../Slider/Slider";
-import Country from "../Country/Country";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Countries from "../Country/Ccountries/Countries";
 
 
 
 const Home = () => {
 
-    const [data, setData] = useState()
-
-
+    const [data, setData] = useState();
 
     useEffect(() => {
         fetch(`https://tourism-management-server-blond.vercel.app/addSpot`)
@@ -22,7 +20,7 @@ const Home = () => {
             console.error('Error fetching user data:', error);
           });
     })
-    console.log(data);
+    // console.log(data);
 
    
     return (
@@ -30,7 +28,7 @@ const Home = () => {
             <Slider></Slider>
             {/* Some Touris Spot fo=rom database*/}
             <div className="mt-8">
-                <h1 className="flex text-3xl font-bold mb-4 justify-center items-center text-blue-400">
+                <h1 className="flex text-5xl font-bold mb-4 justify-center items-center text-blue-400">
                 Tourists Spots Section
                 </h1>
 
@@ -83,7 +81,7 @@ const Home = () => {
             </div>
             
             <div className="mx-10 ">
-            <Country></Country>
+            <Countries></Countries>
             </div>
             
         </div>
