@@ -15,69 +15,73 @@ import UpdateSpot from '../MyList/UpdateSpot';
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout></MainLayout>,
-      errorElement: <NotFound></NotFound>,
-      children: [
-        {
-          path: '/',
-          element: <Home></Home>,
-          loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json')
-          
-        },
-        {
-          path: '/',
-          element: <Country></Country>,
-          loader: () => fetch(`https://abunayeem90.github.io/tourism/tourism.json`)
-        },
-        {
-          path: '/alltouristspot',
-          element: <AllTouristsSpot></AllTouristsSpot>,
-          loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json')
-        },
-        {
-          path: '/alltouristspot/touristspot/:id',
-          element: <TouristSpot></TouristSpot>,
-          loader: ({params}) => fetch(`https://abunayeem90.github.io/tourism/tourism.json?id=${params.id}`)
-        },
-        {
-          path: '/addtouristspot',
-          element: <PrivateRouters>
-            <AddTouristsSpot></AddTouristsSpot>
-          </PrivateRouters>
-        },
-        {
-          path: '/mylist',
-          element: <PrivateRouters>
-            <MyList></MyList>
-          </PrivateRouters>,
-          // loader: () => fetch(`https://tourism-management-server-blond.vercel.app/addSpot`)
-        },
-        {
-          path: '/mylist/update/:id',
-          element:
-            <UpdateSpot></UpdateSpot>,
-          loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement: <NotFound></NotFound>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json'),
 
-        },
-        {
-          path: '/profile',
-          element: <PrivateRouters>
-              <Profile></Profile>
-          </PrivateRouters>
+
       },
-        {
-          path: '/login',
-          element: <Login></Login>
-        },
-        {
-          path: '/register',
-          element: <Register></Register>
-        },
-      ]
-    },
-  ]);
+      {
+        path: '/',
+        element: <Country></Country>,
+        loader: () => fetch(`https://abunayeem90.github.io/tourism/tourism.json`)
+      },
+      {
+        path: '/alltouristspot',
+        element: <AllTouristsSpot></AllTouristsSpot>,
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/addSpot')
+      },
+      {
+        path: '/touristspot/:id',
+        element: <PrivateRouters>
+          <TouristSpot></TouristSpot>
+        </PrivateRouters>,
+        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
+      },
+      {
+        path: '/addtouristspot',
+        element: <PrivateRouters>
+          <AddTouristsSpot></AddTouristsSpot>
+        </PrivateRouters>
+      },
+      {
+        path: '/mylist',
+        element: <PrivateRouters>
+          <MyList></MyList>
+        </PrivateRouters>,
+        
+      },
+      {
+        path: '/mylist/update/:id',
+        element: <PrivateRouters>
+          <UpdateSpot></UpdateSpot>
+        </PrivateRouters>,
+        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
+
+      },
+      {
+        path: '/profile',
+        element: <PrivateRouters>
+          <Profile></Profile>
+        </PrivateRouters>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+    ]
+  },
+]);
 
 
-  export default router;
+export default router;

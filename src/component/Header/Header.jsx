@@ -136,7 +136,7 @@ const Header = () => {
 
 
         {
-          user ? <div className="dropdown dropdown-end flex">
+          user ? <div className="dropdown dropdown-end flex ml-6">
             <div tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src={user?.photoURL || "https://i.ibb.co/9hb5nyw/Whats-App-Image-2024-03-26-at-20-52-28-f98194be.jpg"} alt="image" />
@@ -168,7 +168,7 @@ const Header = () => {
 
             :
             <Link to={'/login'}>
-              <button className="btn btn-neutral px-8 text-white text-xl">Login</button>
+              <button className="btn btn-neutral ml-6 px-8 text-white text-xl">Login</button>
             </Link>
         }
 

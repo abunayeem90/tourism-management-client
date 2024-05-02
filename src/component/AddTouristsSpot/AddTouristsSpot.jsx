@@ -6,11 +6,11 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const AddTouristsSpot = () => {
     const {user} = useContext(AuthContext);
     console.log(user);
+    
 
     const handleAdd = e => {
         e.preventDefault();
         const form = e.target;
-
         const countryName = form.countryName.value;
         const spotName = form.spotName.value;
         const image = form.image.value;
@@ -24,10 +24,9 @@ const AddTouristsSpot = () => {
         const userEmail = form.userEmail.value;
 
         const addInfo = {countryName, spotName, image, location, shortDescription, averageCost, seasonality, travelTime, visitors, userName, userEmail};
-
         console.log(addInfo);
 
-        // send data to the server
+        // send data to the server (user)
 
         fetch('https://tourism-management-server-blond.vercel.app/addSpot', {
             method: 'POST',
@@ -44,12 +43,27 @@ const AddTouristsSpot = () => {
                     title: 'Success!',
                     text: 'Tourist Spot has been added Successfully',
                     icon: 'success',
+                    html: '<p><a href="/mylist">Go to My List</a></p>',
                     confirmButtonText: 'cool'
                 })
                 form.reset('')
             }else{
                 console.error('wrong');
             }
+        })
+
+        // send data to the server (country)
+        fetch('https://tourism-management-server-blond.vercel.app/country_Name', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(addInfo)
+        })
+        .then( res => res.json())
+        .then(data => {
+            console.log(data);
+           
         })
 
 
@@ -72,7 +86,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="countryName"
                                     placeholder="Enter Country Name"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
                             <div className=" w-full ">
@@ -80,7 +94,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="spotName"
                                     placeholder="Enter Spot Name"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required >
                                 </input>
                             </div>
                         </div>
@@ -89,7 +103,7 @@ const AddTouristsSpot = () => {
                             <input type="text"
                                 name="image"
                                 placeholder="Enter Image URL"
-                                className="input input-bordered w-full" >
+                                className="input input-bordered w-full" required >
                             </input>
                         </div>
 
@@ -99,7 +113,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="location"
                                     placeholder="Enter location"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
 
@@ -108,7 +122,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="shortDescription"
                                     placeholder="Enter Short Description"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
                         </div>
@@ -119,7 +133,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="averageCost"
                                     placeholder="Enter Average Cost"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
 
@@ -128,7 +142,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="seasonality"
                                     placeholder="Enter Seasonality"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
                         </div>
@@ -141,7 +155,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="travelTime"
                                     placeholder="Enter Travel Time"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
 
@@ -150,7 +164,7 @@ const AddTouristsSpot = () => {
                                 <input type="text"
                                     name="visitors"
                                     placeholder="Enter Visitor Number"
-                                    className="input input-bordered w-full" >
+                                    className="input input-bordered w-full" required>
                                 </input>
                             </div>
                         </div>
