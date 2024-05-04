@@ -11,7 +11,7 @@ const MainLayout = () => {
 
             <div className="mx-10">
             <Header></Header>
-            <div className="">
+            <div className="min-h-[calc(100vh-304px)]">
             <Outlet></Outlet>
             </div>
             </div>
