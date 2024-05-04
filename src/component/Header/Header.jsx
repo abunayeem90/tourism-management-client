@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Header = () => {
+  
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light" );
   const handleToggle = e => {
     if(e.target.checked){
@@ -138,7 +139,7 @@ const Header = () => {
         {
           user ? <div className="dropdown dropdown-end flex ml-6">
             <div tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div title={user.displayName} className="w-10 rounded-full">
                 <img src={user?.photoURL || "https://i.ibb.co/9hb5nyw/Whats-App-Image-2024-03-26-at-20-52-28-f98194be.jpg"} alt="image" />
               </div>
 

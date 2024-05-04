@@ -66,7 +66,7 @@ const Register = () => {
             })
              // send data to the server
 
-        fetch('https://tourism-management-server-blond.vercel.app/user', {
+        fetch('http://localhost:5000/user', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

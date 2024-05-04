@@ -8,13 +8,18 @@ import MyList from '../MyList/MyList';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import TouristSpot from '../AllTouristsSpot/TouristSpot';
-import Country from '../Country/Country';
 import PrivateRouters from './PrivateRouters';
 import Profile from '../Profile/Profile';
 import UpdateSpot from '../MyList/UpdateSpot';
 import About from '../About/About';
 import Contact from '../About/Contact/Contact';
-import Countries from '../Country/Ccountries/Countries';
+import Bangladesh from '../CountriesSection/Bangladesh';
+import SpotDetails from '../CountriesSection/PostDetails.jsx/SpotDetails';
+import Thailand from '../CountriesSection/Thailand';
+import Malaysia from '../CountriesSection/Malaysia';
+import Indonesia from '../CountriesSection/Indonesia'
+import Vietnam from '../CountriesSection/Vietnam'
+import Cambodia from '../CountriesSection/Cambodia'
 
 
 const router = createBrowserRouter([
@@ -26,26 +31,82 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        // loader: () => fetch('https://abunayeem90.github.io/tourism/tourism.json'),
-
-
+        
       },
       {
-        path: '/',
-        element: <Country></Country>,
-        loader: () => fetch(`https://abunayeem90.github.io/tourism/tourism.json`)
+        path: '/bangladesh',
+        element: <Bangladesh></Bangladesh>,
+        loader: () => fetch('http://localhost:5000/countries/Bangladesh')
       },
+      {
+        path: '/bangladesh/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Bangladesh/${params.id}`)
+      },
+      
+      {
+        path: '/thailand',
+        element: <Thailand></Thailand>,
+        loader: () => fetch('http://localhost:5000/countries/Thailand')
+      },
+      {
+        path: '/thailand/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Thailand/${params.id}`)
+      },
+      {
+        path: '/indonesia',
+        element: <Indonesia></Indonesia>,
+        loader: () => fetch('http://localhost:5000/countries/Indonesia')
+      },
+      {
+        path: '/indonesia/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Indonesia/${params.id}`)
+      },
+      {
+        path: '/malaysia',
+        element: <Malaysia></Malaysia>,
+        loader: () => fetch('http://localhost:5000/countries/Malaysia')
+      },
+      {
+        path: '/Malaysia/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Malaysia/${params.id}`)
+      },
+     
+      {
+        path: '/vietnam',
+        element: <Vietnam></Vietnam>,
+        loader: () => fetch('http://localhost:5000/countries/Vietnam')
+      },
+      {
+        path: '/vietnam/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Vietnam/${params.id}`)
+      },
+      {
+        path: '/cambodia',
+        element: <Cambodia></Cambodia>,
+        loader: () => fetch('http://localhost:5000/countries/Cambodia')
+      },
+      {
+        path: '/cambodia/:id',
+        element: <SpotDetails />,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/Cambodia/${params.id}`)
+      },
+      
       {
         path: '/alltouristspot',
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch('https://tourism-management-server-blond.vercel.app/addSpot')
+        loader: () => fetch('http://localhost:5000/addSpot')
       },
       {
         path: '/touristspot/:id',
         element: <PrivateRouters>
           <TouristSpot></TouristSpot>
         </PrivateRouters>,
-        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/addSpot/${params.id}`)
       },
       {
         path: '/addtouristspot',
@@ -66,16 +127,10 @@ const router = createBrowserRouter([
           <UpdateSpot></UpdateSpot>
         </PrivateRouters>,
           
-        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/addSpot/${params.id}`)
 
       },
-      {
-        path: '/countries',
-        element: <Countries></Countries>,
-        // loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries')
-        
-        
-      },
+      
       {
         path: '/profile',
         element: <PrivateRouters>

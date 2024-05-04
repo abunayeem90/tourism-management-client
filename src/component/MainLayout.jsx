@@ -11,7 +11,9 @@ const MainLayout = () => {
 
             <div className="mx-10">
             <Header></Header>
+            <div className="">
             <Outlet></Outlet>
+            </div>
             </div>
             <Footer></Footer>
         </div>

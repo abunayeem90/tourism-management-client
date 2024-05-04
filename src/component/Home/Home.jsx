@@ -2,16 +2,27 @@
 import Slider from "../Slider/Slider";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Countries from "../Country/Ccountries/Countries";
-
+import CountriesSection from "../CountriesSection/CountriesSection";
+import {  useTypewriter } from 'react-simple-typewriter'
 
 
 const Home = () => {
+    const [text] = useTypewriter({
+       words : [
+        "Welcome to Tourists Spots Section",
+        "Tourists Spots Section",
+        "Tourists",
+        "Spots",
+        "Section",
+        "React Simple Typewriter is working",
+        "Thank you",
+      ]
+      })
 
     const [data, setData] = useState();
 
     useEffect(() => {
-        fetch(`https://tourism-management-server-blond.vercel.app/addSpot`)
+        fetch(`http://localhost:5000/addSpot`)
         .then(res => res.json())
         .then(data => {
             setData(data.slice(0, 6));
@@ -19,7 +30,7 @@ const Home = () => {
         .catch(error => {
             console.error('Error fetching user data:', error);
           });
-    })
+    }, [])
     // console.log(data);
 
    
@@ -30,7 +41,11 @@ const Home = () => {
             <div className="mt-8">
                 <h1 className="flex text-5xl font-bold mb-4 justify-center items-center text-blue-400">
                 Tourists Spots Section
+               
                 </h1>
+                <p className="flex justify-center items-center font-semibold text-2xl text-yellow-300">
+                {text}
+                </p>
 
                 <div className="grid gap-8 my-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
                 {
@@ -80,9 +95,13 @@ const Home = () => {
                 
             </div>
             
-            <div className="mx-10 ">
-            <Countries></Countries>
+            <div className="mx-10 mb-6 ">
+                <CountriesSection></CountriesSection>
+            
             </div>
+            
+
+           
             
         </div>
     );
