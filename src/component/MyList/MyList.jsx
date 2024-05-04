@@ -20,7 +20,7 @@ const MyList = () => {
         
         // Fetch user data when the component mounts
         if(user?.email){
-            fetch(`http://localhost:5000/addSpot-email/${user?.email}`)
+            fetch(`https://tourism-management-server-blond.vercel.app/addSpot-email/${user?.email}`)
            
             .then(res => res.json())
             .then(data => {
@@ -51,7 +51,7 @@ const MyList = () => {
             }).then((result) => {
                 if (result.isConfirmed) {
     
-                    fetch(`http://localhost:5000/addSpot/${_id}`,{
+                    fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${_id}`,{
                         method: 'DELETE'
     
                     })

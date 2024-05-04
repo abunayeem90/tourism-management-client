@@ -36,77 +36,77 @@ const router = createBrowserRouter([
       {
         path: '/bangladesh',
         element: <Bangladesh></Bangladesh>,
-        loader: () => fetch('http://localhost:5000/countries/Bangladesh')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Bangladesh')
       },
       {
         path: '/bangladesh/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Bangladesh/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Bangladesh/${params.id}`)
       },
       
       {
         path: '/thailand',
         element: <Thailand></Thailand>,
-        loader: () => fetch('http://localhost:5000/countries/Thailand')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Thailand')
       },
       {
         path: '/thailand/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Thailand/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Thailand/${params.id}`)
       },
       {
         path: '/indonesia',
         element: <Indonesia></Indonesia>,
-        loader: () => fetch('http://localhost:5000/countries/Indonesia')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Indonesia')
       },
       {
         path: '/indonesia/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Indonesia/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Indonesia/${params.id}`)
       },
       {
         path: '/malaysia',
         element: <Malaysia></Malaysia>,
-        loader: () => fetch('http://localhost:5000/countries/Malaysia')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Malaysia')
       },
       {
         path: '/Malaysia/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Malaysia/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Malaysia/${params.id}`)
       },
      
       {
         path: '/vietnam',
         element: <Vietnam></Vietnam>,
-        loader: () => fetch('http://localhost:5000/countries/Vietnam')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Vietnam')
       },
       {
         path: '/vietnam/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Vietnam/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Vietnam/${params.id}`)
       },
       {
         path: '/cambodia',
         element: <Cambodia></Cambodia>,
-        loader: () => fetch('http://localhost:5000/countries/Cambodia')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/countries/Cambodia')
       },
       {
         path: '/cambodia/:id',
         element: <SpotDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/Cambodia/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-blond.vercel.app/countries/Cambodia/${params.id}`)
       },
       
       {
         path: '/alltouristspot',
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch('http://localhost:5000/addSpot')
+        loader: () => fetch('https://tourism-management-server-blond.vercel.app/addSpot')
       },
       {
         path: '/touristspot/:id',
         element: <PrivateRouters>
           <TouristSpot></TouristSpot>
         </PrivateRouters>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addSpot/${params.id}`)
+        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
       },
       {
         path: '/addtouristspot',
@@ -127,7 +127,7 @@ const router = createBrowserRouter([
           <UpdateSpot></UpdateSpot>
         </PrivateRouters>,
           
-        loader: ({ params }) => fetch(`http://localhost:5000/addSpot/${params.id}`)
+        loader: ({ params }) => fetch(`https://tourism-management-server-blond.vercel.app/addSpot/${params.id}`)
 
       },
       

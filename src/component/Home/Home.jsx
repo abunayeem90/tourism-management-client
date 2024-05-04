@@ -23,7 +23,7 @@ const Home = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addSpot`)
+        fetch(`https://tourism-management-server-blond.vercel.app/addSpot`)
             .then(res => res.json())
             .then(data => {
                 setData(data.slice(0, 6));
