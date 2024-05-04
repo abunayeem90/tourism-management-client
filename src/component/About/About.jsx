@@ -7,7 +7,7 @@ const About = () => {
             <h2 className="text-3xl flex justify-center font-bold text-gray-800 mb-6">About Us</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">Welcome to Air Travel, your premier travel management company specializing in organizing unforgettable travel experiences in South Asia. With a passion for exploration and a commitment to excellence, we strive to create journeys that inspire, excite, and enrich the lives of our clients.</p>
             
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">At Air Travel, we understand that travel is more than just visiting new destinations - it is about immersing yourself in new cultures, creating lasting memories, and forging meaningful connections with the world around you. That's why we go above and beyond to craft bespoke travel experiences that exceed expectations and leave a lasting impression.</p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">At Air Travel, we understand that travel is more than just visiting new destinations - it is about immersing yourself in new cultures, creating lasting memories, and forging meaningful connections with the world around you. That is why we go above and beyond to craft bespoke travel experiences that exceed expectations and leave a lasting impression.</p>
             
             <p className="text-lg text-gray-700 leading-relaxed mb-6">Our team of experienced travel experts is dedicated to providing personalized service and attention to detail at every step of your journey. From the moment you contact us to the day you return home, we are committed to ensuring that your travel experience is seamless, stress-free, and truly unforgettable.</p>
             

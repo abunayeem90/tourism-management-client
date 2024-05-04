@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
-
 const CountriesSection = () => {
     const [country, setCountry] = useState();
 
@@ -58,7 +56,7 @@ const CountriesSection = () => {
                     Indonesia
                         </h3>
 					
-					<p>Indonesia, the largest archipelago in the world, is renowned for its stunning natural beauty, including tropical beaches, lush rainforests, and active volcanoes. Bali, known as the "Island of the Gods," attracts tourists with its unique culture, while Jakarta serves as the bustling capital.</p>
+					<p>Indonesia, the largest archipelago in the world, is renowned for its stunning natural beauty, including tropical beaches, lush rainforests, and active volcanoes. Bali, known as the "Island of the Gods" attracts tourists with its unique culture, while Jakarta serves as the bustling capital.</p>
 				</div>
 			</Link>
 
