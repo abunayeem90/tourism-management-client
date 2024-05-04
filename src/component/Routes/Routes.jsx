@@ -12,7 +12,6 @@ import PrivateRouters from './PrivateRouters';
 import Profile from '../Profile/Profile';
 import UpdateSpot from '../MyList/UpdateSpot';
 import About from '../About/About';
-import Contact from '../About/Contact/Contact';
 import Bangladesh from '../CountriesSection/Bangladesh';
 import SpotDetails from '../CountriesSection/PostDetails.jsx/SpotDetails';
 import Thailand from '../CountriesSection/Thailand';
@@ -20,6 +19,7 @@ import Malaysia from '../CountriesSection/Malaysia';
 import Indonesia from '../CountriesSection/Indonesia'
 import Vietnam from '../CountriesSection/Vietnam'
 import Cambodia from '../CountriesSection/Cambodia'
+import Contact from '../Contact/Contact';
 
 
 const router = createBrowserRouter([
