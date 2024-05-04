@@ -62,4 +62,48 @@ Name: Air Travel
 ```
 
 
+- [react-awesome-reveal](https://react-awesome-reveal.morello.dev/)    
+  [Documentation](https://www.npmjs.com/package/react-awesome-reveal)
+
+
+  Install with npm
+
+```bash
+ npm i react-awesome-reveal
+```
+
+
+- [react-awesome-reveal](https://react-awesome-reveal.morello.dev/)    
+  [Documentation](https://github.com/nfl/react-helmet)
+
+
+  Install with npm
+
+```bash
+npm i react-helmet
+```
+
+
+- [react-awesome-reveal](https://react-icons.github.io/react-icons/)    
+  [Documentation](https://www.npmjs.com/package/react-icons)
+
+
+  Install with npm
+
+```bash
+npm i react-icons
+```
+
+
+- [React Simple Typewriterl](https://react-simple-typewriter.vercel.app/?path=/story/introduction--page)    
+  [Documentation](https://www.npmjs.com/package/react-simple-typewriter)
+
+
+  Install with npm
+
+```bash
+npm i react-simple-typewriter
+```
+
+
 
